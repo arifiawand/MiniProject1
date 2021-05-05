@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>remove</title>
+</head>
+<body>
+	<div class="form-horizontal">
+		<form method="post" id="form-mahasiswa-delete">
+			<p>Are you sure to delete this data?</p>
+			<input type="hidden" id="code" name="kode"
+				th:value="${valueDelete.kode}" />
+			<button type="reset" data-dismiss="modal" class="btn btn-warning">No</button>
+			<button type="submit" class="btn btn-danger">Yes</button>
+		</form>
+	</div>
+</body>
+</html>

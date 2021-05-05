@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="Dashboard" method="post">
+		<div>
+			<label for="nomorpasien">Nomor Pasien</label> <input id="nomorpasien">
+		</div>
+		<div>
+			<label for="namapasien">Nama Pasien</label> <input id="namapasien">
+		</div>
+		<div>
+			<label for="gender">Gender Pasien</label> <input type="radio"
+				id="male" name="gender" value="pria"> <label for="pria">Pria</label>
+			<input type="radio" id="wanita" name="gender" value="wanita">
+			<label for="wanita">Wanita</label>
+		</div>
+		<div>
+			<label for="kategori">Kategori Pasien</label> <select id="kategori">
+				<option value="BPJS" selected>BPJS</option>
+				<option value="asuransi">Asuransi</option>
+				<option value="pribadi">Pribadi</option>
+			</select>
+		</div>
+		<div>
+			<label for="biaya">Biaya Pasien</label> <input id="biaya">
+		</div>
+		<div>
+			<label for="tl">Tanggal Lahir</label> <input type="date" id="tl"
+				name="tl">
+		</div>
+		<div>
+			<button type="submit" value="Submit">Submit</button>
+			<button type="reset" value="Reset">Reset</button>
+		</div>
+	</form>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form  id="form-edit-mahasiswa">
+		<table>
+			<tr>
+				<td>Kode Mahasiswa</td>
+				<td><input type="text" name="kode" th:value="${valueEdit.kode}" readonly="readonly"></td>
+			</tr>
+			<tr>
+				<td>Nama Mahasiswa</td>
+				<td><input type="text" th:value="${valueEdit.nama}" name="nama"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="jk" value="Pria" th:field="${valueEdit.jk}">Pria <input
+					type="radio" name="jk" value="Wanita" th:field="${valueEdit.jk}">Wanita</td>
+			</tr>
+			<tr>
+				<td>Usia</td>
+				<td><input type="number" th:value="${valueEdit.usia}" name="usia"></td>
+			</tr>
+			<tr>
+				<td>Jurusan</td>
+				<td><select name="jurusan" id="jurusanId">
+				<optgroup label="Pilih Jurusan">
+				<option value="Belum Ambil"></option>
+				<option th:each="jurusanModel:${jurusanModelList}" th:value="${jurusanModel.kodeJurusan}"
+				th:text="${jurusanModel.namaJurusan}" th:field="${valueEdit.jurusan}"></option>
+				</optgroup></select></td>
+			</tr>
+			<tr>
+				<td>Semester</td>
+				<td><input type="number" th:value="${valueEdit.semester}" name="semester"></td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td><textarea rows="3" cols="21" name="alamat" th:text="${valueEdit.alamat}"></textarea></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><select name="status" th:field="${valueEdit.status}">
+						<optgroup label="Pilihan Status">
+							<option value="AKTIF">AKTIF</option>
+							<option value="NON-AKTIF">NON-AKTIF</option>
+						</optgroup>
+				</select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				<button type="submit" class="btn btn-primary">Update</button></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>
+</body>
+</html>

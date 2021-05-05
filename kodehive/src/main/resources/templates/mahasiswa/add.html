@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<form id="form-add-mahasiswa" method="post">
+		<table>
+			<tr>
+				<td>Kode Mahasiswa</td>
+				<td><input type="text" placeholder="Kode Mahasiswa" name="kode"></td>
+			</tr>
+			<tr>
+				<td>Nama Mahasiswa</td>
+				<td><input type="text" placeholder="Nama Mahasiswa" name="nama"></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="jk" value="Pria">Pria <input
+					type="radio" name="jk" value="Wanita">Wanita</td>
+			</tr>
+			<tr>
+				<td>Usia</td>
+				<td><input type="number" placeholder="Usia" name="usia"></td>
+			</tr>
+			<tr>
+				<td>Jurusan</td>
+				<td><select name="jurusan" id="jurusanId">
+				<optgroup label="Pilih Jurusan">
+				<option value="Belum Ambil"></option>
+				<option th:each="jurusanModel:${jurusanModelList}" th:value="${jurusanModel.kodeJurusan}"
+				th:text="${jurusanModel.namaJurusan}"></option>
+				</optgroup></select></td>
+			</tr>
+			<tr>
+				<td>Semester</td>
+				<td><input type="number" placeholder="Semester" name="semester"></td>
+			</tr>
+			<tr>
+				<td>Alamat</td>
+				<td><textarea rows="3" cols="21" name="alamat" placeholder="Masukkan Alamat"></textarea></td>
+			</tr>
+			<tr>
+				<td>Status</td>
+				<td><select name="status">
+						<optgroup label="Pilihan Status">
+							<option value="AKTIF">AKTIF</option>
+							<option value="NON-AKTIF">NON-AKTIF</option>
+						</optgroup>
+				</select></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input id="btn-create" type="submit">&nbsp;&nbsp;<input
+					type="reset"></td>
+			</tr>
+		</table>
+	</form>
+</body>
+</html>

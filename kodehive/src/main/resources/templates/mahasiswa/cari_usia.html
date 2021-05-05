@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<h1>Cari Usia Mahasiswa</h1>
+
+	<div>
+		<form th:action=@{/mahasiswa/proses_cari_usia} name="formUsia" onsubmit="return validateForm()" method="post" required>
+			<label>Usia :</label> <select name="operator">
+				<option value="samaDengan">=</option>
+				<option value="lebihDari">></option>
+				<option value="kurangDari"><</option>
+				<option value="lebihSama">>=</option>
+				<option value="kurangSama"><=</option>
+				<option value="negasi">!=</option>
+			</select> <input type="number" value="1" placeholder="Usia" name="cariUsia">
+			<br/>
+			<label>Awalan Nama :</label> <select name="awalan">
+				<option value="a">a</option>
+				<option value="b">b</option>
+				<option value="c">c</option>
+				<option value="d">d</option>
+				<option value="e">e</option>
+				<option value="f">f</option>
+				<option value="g">g</option>
+			</select>
+			
+			<button type="submit">Cari</button>
+		</form>
+	</div>
+<div><table border="1">
+			<thead>
+				<tr>
+					<td>Nama Mahasiswa</td>
+					<td>Usia</td>
+				</tr>
+			</thead>
+			<tbody id="list-usia-mahasiswa">
+				<!--  ambil data dari list.html -->
+				<!--  data yang diinput muncul disini -->
+			</tbody>
+		</table></div>
+</body>
+<script type="text/javascript">
+
+function validateForm() {
+	var x = document.forms["formUsia"]["cariUsia"].value;
+	  if (x == "") {
+	    alert("Name must be filled out");
+	    return false;
+	  }
+	} 
+</script>
+</html>

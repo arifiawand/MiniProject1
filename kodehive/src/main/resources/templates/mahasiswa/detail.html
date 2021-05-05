@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+		<div class="container">
+		<h2 class="text-center">Detail Mahasiswa</h2>
+		<br/>
+		<table class="table table-sm" id="form-detail-mahasiswa">
+		<thead class="table-success">
+		<th>
+				<td><p>Kode Mahasiswa<p></td>
+			</th>
+			<th>
+				<td><p>Nama Mahasiswa</p></td>
+			</th>
+			<th>
+				<td><p>Gender</p></td>
+			</th>
+			<th>
+				<td><p>Usia</p></td>
+			</th>
+			<th>
+				<td><p>Jurusan</p></td>
+			</th>
+			<th>
+				<td><p>Kode Jurusan</p></td>
+			</th>
+			<th>
+				<td><p>Kode Fakultas</p></td>
+			</th>
+			<th>
+				<td><p>Semester</p></td>
+			</th>
+			<th>
+				<td><p>Alamat</p></td>
+			</th>
+			<th>
+				<td><p>Status</p></td>
+			</th>
+			</thead>
+			<tbody>
+			<th>
+				<td><p name="kode" th:text="${detail.kode}"></p></td>
+			</th>
+			<th>
+				<td><p th:text="${detail.nama}" name="nama"></p></td>
+			</th>
+			<th>
+				<td><p name="jk" th:text="${detail.jk}"></p></td>
+			</th>
+			<th>
+				<td><p th:text="${detail.usia}" name="usia"></p></td>
+			</th>
+			<th>
+				<td><p name="jurusan" th:text="${detail.jurusanModel.namaJurusan}"></p></td>
+			</th>
+			<th>
+				<td><p name="kode jurusan" th:text="${detail.jurusan}"></p> </td>
+			</th>
+			<th>
+				<td><p name="kode jurusan" th:text="${detail.jurusanModel.kodeFakultas}"></p></td>
+			</th>
+			<th>
+				<td><p name="semester" th:text="${detail.semester}"></p></td>
+			</th>
+			<th>
+				<td><p name="alamat" th:text="${detail.alamat}"></p></td>
+			</th>
+			<th>
+				<td><p name="status" th:text="${detail.status}"></p></td>
+			</th>
+			</tbody>
+		</table></div>
+</body>
+</html>
+</body>
+</html>
