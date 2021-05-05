@@ -33,4 +33,7 @@ public interface MahasiswaRepository extends JpaRepository<MahasiswaModel, Strin
 	@Query("Select P from MahasiswaModel P where nm_mahasiswa LIKE ?1% and usia != ?2")
 	List<MahasiswaModel> opNegasi(String awalan, int usia);
 	
+	@Query("Select P from MahasiswaModel P where nm_mahasiswa LIKE ?1% and usia != ?2")
+	List<MahasiswaModel> opNegasi(String awalan, int usia);
+	
 }
